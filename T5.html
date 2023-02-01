@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Aman Shukla</title>
+</head>
+<body>
+    <input id="in1" type="text">
+<input id="in2" type="text">
+<br><br>
+<button id="addButton">+</button>
+<button id="subtractButton">-</button>
+<button id="multiplyButton">*</button>
+<button id="divideButton">/</button>
+<br><br>
+<p id="result"></p>
+
+<script>
+const addButton = document.getElementById("addButton");
+const subtractButton = document.getElementById("subtractButton");
+const multiplyButton = document.getElementById("multiplyButton");
+const divideButton = document.getElementById("divideButton");
+
+const in1 = document.getElementById("in1");
+const in2 = document.getElementById("in2");
+
+const result = document.getElementById("result");
+
+addButton.addEventListener("click", function() {
+  const value1 = Number.parseInt(in1.value);
+  const value2 = Number.parseInt(in2.value);
+  
+  result.innerText = value1 + value2;
+});
+
+subtractButton.addEventListener("click", function() {
+  const value1 = Number.parseInt(in1.value);
+  const value2 = Number.parseInt(in2.value);
+  
+  result.innerText = value1 - value2;
+});
+
+multiplyButton.addEventListener("click", function() {
+  const value1 = Number.parseInt(in1.value);
+  const value2 = Number.parseInt(in2.value);
+  
+  result.innerText = value1 * value2;
+});
+
+divideButton.addEventListener("click", function() {
+  const value1 = Number.parseInt(in1.value);
+  const value2 = Number.parseInt(in2.value);
+  
+  result.innerText = value1 / value2;
+});
+
+</script>
+</body>
+</html>

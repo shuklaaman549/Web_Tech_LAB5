@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Aman Shukla</title>
+</head>
+<body>
+    <p>This is a paragraph followed by a list</p>
+    <div id="container"></div>
+<script>
+    const container = document.getElementById("container");
+
+const title = document.createElement("h1");
+title.innerText = "I am an H1";
+container.appendChild(title);
+
+const list = document.createElement("ol");
+container.appendChild(list);
+
+const item1 = document.createElement("li");
+item1.innerText = "This is first";
+list.appendChild(item1);
+
+const item2 = document.createElement("li");
+item2.innerText = "This is second";
+list.appendChild(item2);
+
+const item3 = document.createElement("li");
+item3.innerText = "This is third";
+list.appendChild(item3);
+
+const addItemButton = document.createElement("button");
+addItemButton.innerText = "Click Here";
+container.appendChild(addItemButton);
+
+addItemButton.addEventListener("click", function() {
+  const newItem = document.createElement("li");
+  newItem.innerText = "New Item";
+  list.appendChild(newItem);
+});
+
+</script>
+</body>
+</html>

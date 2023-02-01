@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Aman Shukla</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Simple Tip Calculator</h1>
+        <div id="amount-section">
+          <label for="amount-input">Amount:</label>
+          <input type="number" id="amount-input" value="0">
+        </div>
+        <div id="percentage-section">
+          <label for="percentage-input">Percentage:</label>
+          <input type="number" id="percentage-input" value="0">
+          <span>%</span>
+        </div>
+        <div id="split-section">
+          <label for="split-input">Split between:</label>
+          <input type="number" id="split-input" value="1">
+          <span>people</span>
+        </div>
+        <button id="calculate-button">Calculate</button>
+        <div id="result-section">
+          <p>Tip: <span id="tip-amount">$0.00</span></p>
+          <p>Total per person: <span id="total-per-person">$0.00</span></p>
+        </div>
+      </div>
+<script>
+    const amountInput = document.getElementById("amount-input");
+const percentageInput = document.getElementById("percentage-input");
+const splitInput = document.getElementById("split-input");
+const calculateButton = document.getElementById("calculate-button");
+const tipAmountSpan = document.getElementById("tip-amount");
+const totalPerPersonSpan = document.getElementById("total-per-person");
+
+calculateButton.addEventListener("click", function() {
+  const amount = Number(amountInput.value);
+  const percentage = Number(percentageInput.value) / 100;
+  const split = Number(splitInput.value);
+  
+  const tipAmount = amount * percentage;
+  const totalAmount = amount + tipAmount;
+  const totalPerPerson = totalAmount / split;
+  
+  tipAmountSpan.innerText = "$" + tipAmount.toFixed(2);
+  totalPerPersonSpan.innerText = "$" + totalPerPerson.toFixed(2);
+});
+
+</script>      
+</body>
+</html>

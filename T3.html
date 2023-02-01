@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Aman Shukla</title>
+<style>
+    li {
+  font-size: 20px;
+  list-style-type: none;
+}
+
+</style>
+</head>
+<body>
+    <button id="incrementButton">Increment</button>
+<ul id="countList"></ul>
+<script>
+    const button = document.getElementById("incrementButton");
+const countList = document.getElementById("countList");
+
+let countValue = 0;
+
+button.addEventListener("click", function() {
+  countValue += 1;
+  
+  const listItem = document.createElement("li");
+  listItem.innerHTML = countValue;
+  listItem.style.fontSize = countValue * 20 + "px";
+  
+  countList.appendChild(listItem);
+});
+
+</script>
+</body>
+</html>
